@@ -1,0 +1,36 @@
+{
+  "name": "Googles-Books-React-Search",
+  "version": "1.0.0",
+  "description": "React based app looking at the Google Books API and returning information on authors, titles, and subjects.",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alapan100/Googles-Books-React-Search.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alapan100/Googles-Books-React-Search/issues"
+  },
+  "homepage": "https://github.com/Alapan100/Googles-Books-React-Search#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "if-env": "^1.0.4"
+  }
+}
